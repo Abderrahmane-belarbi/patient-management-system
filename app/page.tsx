@@ -1,10 +1,9 @@
-import { Button } from "@/components/ui/button";
-
 export default function Home() {
   return (
-    <div>
-      <p>Home</p>
-      <Button>Click</Button>
+    <div className="flex h-screen max-h-screen">
+      <section className="remove-scrollbar container my-auto">
+
+      </section>
     </div>
   );
 }
