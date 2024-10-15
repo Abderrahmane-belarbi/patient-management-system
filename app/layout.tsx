@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
-import localFont from "next/font/local";
 import "./globals.css";
 import { Plus_Jakarta_Sans } from "next/font/google";
+import { cn } from '@/lib/utils'
 
 const plusJakartaSans = Plus_Jakarta_Sans({
   subsets: ["latin"],
