@@ -15,15 +15,20 @@ interface CustomFormFieldProps {
   control: Control<any>;
   fieldType: FormFieldType;
   name: string;
-  label: string;
-  placeholder: string;
-  iconSrc: string
+  label?: string;
+  placeholder?: string;
+  iconSrc?: string
+  iconAlt?: string
 }
 
 export default function CustomFormField({
   control,
   fieldType,
   name,
+  label,
+  placeholder,
+  iconSrc,
+  iconAlt
 }: CustomFormFieldProps) {
   return (
     <FormField

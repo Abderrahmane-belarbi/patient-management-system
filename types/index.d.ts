@@ -59,5 +59,11 @@ declare type UpdateAppointmentParams = {
 
 export enum FormFieldType {
   INPUT = "input",
-  TEXTAREA = ''
+  TEXTAREA = 'textarea',
+  PHONE_INPUT = 'phoneInput',
+  CHECKBOX = 'checkbox',
+  DATE_PICKER = 'datePicker',
+  SELECT = 'select',
+  SKELETON = 'skeleton',
+  
 }
