@@ -14,9 +14,9 @@ const formSchema = z.object({
   username: z.string().min(2).max(50),
 });
 
-const [isLoading, setIsLoading] = useState(false);
 
 export default function PatientForm() {
+  const [isLoading, setIsLoading] = useState(false);
   // Defined form.
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
