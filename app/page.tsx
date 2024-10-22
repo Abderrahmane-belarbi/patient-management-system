@@ -22,7 +22,7 @@ export default function Home() {
             <Link href="/?admin=true" className="text-green-500">
               Admin
             </Link>
-          </div>
+          </div> 
         </div>
       </section>
       {/* Side Image */}

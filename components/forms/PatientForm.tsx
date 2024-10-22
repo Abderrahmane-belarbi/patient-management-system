@@ -9,9 +9,11 @@ import SubmitButton from "../SubmitButton";
 import { useState } from "react";
 import { UserFormValidation } from "@/lib/validation";
 import { z } from "zod";
+import { useRouter } from "next/navigation";
 
 export default function PatientForm() {
   const [isLoading, setIsLoading] = useState(false);
+  const router = useRouter();
   // Defined form.
   const form = useForm<z.infer<typeof UserFormValidation>>({
     resolver: zodResolver(UserFormValidation),
@@ -30,8 +32,9 @@ export default function PatientForm() {
         email,
         phone
       }
+
     } catch (error: any) {
-      console.log(error.message)
+      console.log(error.message);
     } finally {
       setIsLoading(false);
     }
