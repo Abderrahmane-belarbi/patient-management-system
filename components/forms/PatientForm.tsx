@@ -7,11 +7,14 @@ import { Button } from "@/components/ui/button";
 import { Form } from "@/components/ui/form";
 import CustomFormField from "./CustomFormField";
 import { FormFieldType } from "@/types/index.d"; 
+import SubmitButton from "../SubmitButton";
+import { useState } from "react";
 
 const formSchema = z.object({
   username: z.string().min(2).max(50),
 });
 
+const [isLoading, setIsLoading] = useState(false);
 
 export default function PatientForm() {
   // Defined form.
@@ -40,8 +43,29 @@ export default function PatientForm() {
             label='Full name'
             placeholder='John Doe'
             iconSrc='/assets/icons/user.svg'
+            iconAlt="user-icon"
         />
-        <Button type="submit">Submit</Button>
+        <CustomFormField 
+            fieldType={FormFieldType.INPUT}
+            control={form.control}
+            name='email'
+            label='Email'
+            placeholder='john-doe@example.com'
+            iconSrc='/assets/icons/email.svg'
+            iconAlt="email-icon"
+        />
+        <CustomFormField 
+            fieldType={FormFieldType.PHONE_INPUT}
+            control={form.control}
+            name='phone'
+            label='Phone number'
+            placeholder='(213) 123-4567 89'
+        />
+        <SubmitButton
+          isLoading={isLoading}
+          className=""
+          
+        />
       </form>
     </Form>
   );
